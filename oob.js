@@ -1,8 +1,13 @@
-let firstName = new String(" This is my first Name ")
+function welcome(salutation) {
+    return function name(firstName){
+        console.log(`${salutation}! Nice to meet you, ${firstName}!`);
+    }
+    
+}
 
-console.log(firstName.toLowerCase())
-
-String.prototype.addShock= function(){ return  this +  "!!!!!"  }
 
 
-console.log(firstName.addShock())
+const heyThere = welcome('Hey there');
+
+
+heyThere('Nyakundi');
